@@ -5,7 +5,6 @@ body{
     margin: 0;
 }
 
-
 /*---------------
  Header sections
  ---------------*/
@@ -25,7 +24,7 @@ body{
     transition: 0.8s;
 }
 .header-title{
-    font-size: 54px;
+    font-size: 44px;
     font-weight: 700;
     line-height: 1.8em;
     color: #ffffff;
@@ -33,7 +32,7 @@ body{
     margin-top: 75px; 
 }
 .banner-button{
-    margin-top: -85px;
+    margin-top: -60px;
 }
 .banner-button a {
     width: 100px;
@@ -141,7 +140,13 @@ body{
 
 }
 .news-section{
-    background-color: #181733;
+    background: linear-gradient(rgba(0,0,0,0.5), #009688),url(assets/Ronaldinhio_Samarreta_1600x700.jpg);
+    /* background: linear-gradient(
+180deg
+,rgba(24,23,51,0) 0,rgba(24,23,51,.3) 20%,#181733 75%),url(assets/Ronaldinhio_Samarreta_1600x700.jpg);  */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
     text-align: center;
     font-size: 30px;
     color: white;
@@ -246,7 +251,7 @@ footer{
 /*-------------- Header Section Desktop 1920 --------------*/
 @media screen and (min-width: 1680px) and (min-width: 1920px) {
     .header-title {
-        margin-left: 250px;
+        margin-left: 350px;
     }
     }
 
@@ -259,7 +264,7 @@ footer{
    width: 100%;
 }
 .header-title{
-   font-size: 30px;
+   font-size: 25px;
    margin-left: 16px;
    margin-bottom: 50px;
 }
@@ -324,6 +329,3 @@ footer{
         margin-left: 0;
     }
 }
-
-
-
