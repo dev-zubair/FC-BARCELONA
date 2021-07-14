@@ -32,7 +32,7 @@ body{
     margin-top: 75px; 
 }
 .banner-button{
-    margin: 0px auto;
+    margin-top: -85px;
 }
 .banner-button a {
     width: 100px;
@@ -135,7 +135,9 @@ body{
 .new-main .thumbnail img{
     width: 300px;
     border-radius: 20px;
-    box-shadow: 10px 10px 10px #82142d;
+    /* box-shadow: 0px 10px 13px -7px #ffffff */
+    box-shadow: 3px 3px red, -.5em 0 .5em #fdc52c;
+
 }
 .news-section{
     background-color: #181733;
@@ -249,6 +251,9 @@ footer{
    margin-left: 16px;
    margin-bottom: 50px;
 }
+.banner-button{
+    margin: 0;
+}
 .header-banner{
    margin: 30px 0;
    margin-left: 30px;
@@ -307,3 +312,6 @@ footer{
         margin-left: 0;
     }
 }
+
+
+
