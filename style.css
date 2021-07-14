@@ -233,14 +233,18 @@ footer{
     color: white;
     margin-top: 20px;
 }
-
+.official{
+    font-size: 14px;
+    font-weight: 100px;
+    color: hsla(0,0%,100%,.75);;
+}
 
 
 /*------------------------
     Responsive devices  
  ------------------------*/
 /*-------------- Header Section Desktop 1920 --------------*/
-@media screen and (min-width: 1680px) and (max-width: 1920px) {
+@media screen and (min-width: 1680px) and (min-width: 1920px) {
     .header-title {
         margin-left: 250px;
     }
@@ -320,3 +324,6 @@ footer{
         margin-left: 0;
     }
 }
+
+
+
