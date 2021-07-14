@@ -2,20 +2,26 @@
 
 body{
     font-family: 'Poppins', sans-serif;
+    margin: 0;
 }
 
 /*---------------
  Header sections
  ---------------*/
-.container{
+
+ .container {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .main-header{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     background-color: #2D25A0;
     padding-bottom: 50px;
+    overflow: hidden;
+    transition: 0.8s;
 }
 .header-title{
     font-size: 54px;
@@ -23,20 +29,42 @@ body{
     line-height: 1.8em;
     color: #ffffff;
     margin-left: 80px;
-    margin-top: 75px;
-    
+    margin-top: 75px; 
 }
-.watch-btn{
-    margin-top: -75px;
+.banner-button{
+    margin: 0px auto;
 }
-.btn-link{
+.banner-button a {
+    width: 100px;
+    text-decoration: none;
     font-size: 16px;
     font-weight: 500;
     color: white;
-    text-decoration: none;
     padding: 10px 24px;
-    background-color: #E02C6D;
+    margin: 0 10px;
+    color: #E02C6D;;
+    border: 2px solid #E02C6D;
+    position: relative;
+    z-index: 1;
+    transition: color 0.5s;
 }
+.banner-button a span{
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #E02C6D;
+    z-index: -1;
+    transition: 0.5s;
+}
+.banner-button a:hover span{
+    width: 100%;
+}
+.banner-button a:hover{
+    color: white;
+}
+
 .header-banner{
     margin-top: 100px;
     margin-left: 50px;
@@ -45,41 +73,237 @@ body{
     width: 556px;
     height: 438px;
 }
+.header-banner{
+    transition: 1.5s;
+}
+.header-banner:hover{
+    transform: scale(1.1);
+}
 
 /*---------------
  Players sections
  ---------------*/
  .players{
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-column-gap: 30px;
-     /* grid-row-gap: 27px */
-     margin-top: 43px;
- }
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    margin-top: 43px;
+}
 .player{
-    width: 330px;
-    height: 474px;
-    border: 1px solid white;
-    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
-    margin-top: 27px;
+   width: 330px;
+   height: 474px;
+   border: 1px solid white;
+   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+   margin-top: 27px;
 }
 .thumbnail{
-    margin: 15px;
+   margin: 15px;
 }
 .player .thumbnail img{
-     width: 300px;
-     height: 256px;
+    width: 300px;
+    height: 256px;
 }
 .player-info{
-    margin: 15px;
+   margin: 15px;
 }
 .player-name{
-    font-size: 28px;
-    color: #18191F;
-    font-weight: 700;
+   font-size: 28px;
+   color: #18191F;
+   font-weight: 700;
 }
 .player-info p{
-    font-size: 16px;
-    font-weight: 400;
-    color: #6C6C6C;
+   font-size: 16px;
+   font-weight: 400;
+   color: #6C6C6C;
+}
+
+/*---------------
+ Club News Section
+ ---------------*/
+
+.news{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+}
+.new-main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+
+.new-main .thumbnail img{
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px #82142d;
+}
+.news-section{
+    background-color: #181733;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    margin: 50px 0;
+    padding-bottom: 50px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.news-section p {
+    font-size: 15px;
+    margin-top: -40px;
+}
+.new-title{
+    color: #fdc52c;
+    background-image: url(assets/horizontal-flash.jpg);
+    height: 100px;
+    border-radius: 10px;
+}
+
+
+/*---------------
+ MORE THAN A CLUB
+ ---------------*/
+
+.club-section{
+    background-color: #111025;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+span{
+    color: #fdc52c;
+}
+.full-width{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.league{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 25px;
+}
+.league img{
+    width: 300px;
+}
+
+
+/*---------------
+ Footer section
+ ---------------*/
+footer{
+    background-image: url(assets/barca-today.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    width: 100%;
+}
+.footers{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo{
+    margin-left: 400px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.logo img{
+    width: 50%;
+    text-align: center;
+}
+.icon-social a{
+    font-size: 40px;
+    color: #fdc52c;
+    padding-left: 10px;
+}
+.icon-social a:hover{
+    color: whitesmoke;
+}
+.copy-right{
+    color: white;
+    margin-top: 20px;
+}
+
+
+
+/*------------------------
+    Responsive devices  
+ ------------------------*/
+/*-------------- Header Section Mobile Device --------------*/
+@media screen and (max-height: 688px) {
+.main-header {
+   display: grid;
+   grid-template-columns: repeat(1, 1fr);
+   padding-bottom: 0;
+   width: 100%;
+}
+.header-title{
+   font-size: 30px;
+   margin-left: 16px;
+   margin-bottom: 50px;
+}
+.header-banner{
+   margin: 30px 0;
+   margin-left: 30px;
+}
+.header-banner img {
+   width: 329px;
+   height: 259px;
+}
+}
+
+/*-------------- Player Section Mobile Device --------------*/
+@media only screen and (max-width:688px) {
+    .players {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap : 0px;
+    }
+}
+
+/* News Section Responsive Desives  */
+@media screen and (max-height: 688px) {
+    .news {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 30px;
+        width: 100%;
+    }
+}
+
+
+/*-------------- Club Section Mobile Device --------------*/
+@media only screen and (max-width:688px) {
+.club-section {
+    width: 100%;
+    }
+.league {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 10px;
+}
+.full-width {
+    flex-direction: column;
+}
+}
+
+/*-------------- Footer Section Mobile Device --------------*/
+@media only screen and (max-width:688px) {
+.container{
+    width: 100%;
+}
+.footers{
+    padding: 0;
+}
+.logo {
+        text-align: center;
+        margin-left: 0;
+    }
 }
